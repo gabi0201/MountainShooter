@@ -24,6 +24,9 @@ class Menu:
             self.menu_text(50, "Mountain", C_ORANGE, ((WIN_WIDTH / 2), 70))
             self.menu_text(50, "Shooter", C_ORANGE, ((WIN_WIDTH / 2), 120))
 
+            # Display name and RU
+            self.display_name_ru()
+
             for i in range(len(MENU_OPTION)):
                 if i == menu_option:
                     self.menu_text(20, MENU_OPTION[i], C_YELLOW, ((WIN_WIDTH / 2), 200 + 25 * i))
@@ -55,3 +58,9 @@ class Menu:
         text_surf: Surface = text_font.render(text, True, text_color).convert_alpha()
         text_rect: Rect = text_surf.get_rect(center=text_center_pos)
         self.window.blit(source=text_surf, dest=text_rect)
+
+    def display_name_ru(self):
+        name_ru = "Gabrielle Amaral de Souza - RU 4277680"
+        font = pygame.font.SysFont(name="Lucida Sans Typewriter", size=18)
+        text_surface = font.render(name_ru, True, C_WHITE)
+        self.window.blit(text_surface, (10, 10))
