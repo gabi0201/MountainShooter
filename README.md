@@ -2,7 +2,7 @@
 ===============
  
 
-### About
+### Sobre
 
 Mountain Shooter é um jogo arcade 2D desenvolvido com Pygame. Originalmente, o jogo tinha 2 níveis, cada um terminando com um evento de timeout. O jogo pode ser jogado no modo cooperativo (2 jogadores). O placar é salvo em um banco de dados (SQLite3).
 
